@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+}
+span {
+    background-color: yellow;
+    border-radius: 30px;
+    border: 1px solid yellowgreen;
+    padding: 5px;
+}
+code {
+    background-color: white;
+    color: red;
+}
+.container {
+    width: 80%;
+    height: 90%;
+    background-color: #fff;
+    justify-content: center;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- required meta tags  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - VI / 1- selecteur</title>
+    <!-- mes styles css  -->
+    <link rel="stylesheet" href="../../coursJAVASCRIPT/02_variables_constantes/css/constantes.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- js de la page  -->
+    <!-- <script src="selecteur.js"></script> -->
+</head>
+
+<body>
+    <!-- =================================== -->
+    <!-- en-tête de la page -->
+    <!-- =================================== -->
+    <div class="container-fluid bg-info p-5 text-center">
+        <h1 class="display-4" id="titreN1">JavaScript - VI / 01 - les selecteurs</h1>
+        <p class="lead"><i class="bi bi-suit-heart"></i>les sélécteurs en js<i class="bi bi-suit-heart"></i></p>
+
+    </div>
+    <!-- =================================== -->
+    <!-- conteneur principal -->
+    <!-- =================================== -->
+    <div class="container p-4">
+        <section class="row mt-4">
+            <div class="col-12">
+                <h2 id="titreN2">ce titre sera selectionné dans la console (avec queryselector)</h2>
+            </div>
+            <!-- fin col  -->
+
+            <div class="col-3">
+                <p class="bg-info" id="aChanger">ce titre va changer</p>
+            </div>
+            <div class="col-3">
+                <p class="ma-classe">paragraphe2</p>
+            </div>
+            <div class="col-3">
+                <p class="">paragraphe3</p>
+            </div>
+            <div class="col-3">
+                <p class="p-4">paragraphe4</p>
+            </div>
+
+        </section>
+        <!-- fin rangée  -->
+        <section class="row mt-4">
+            <div class="col-6">
+                <p class="ma-classe">une phrase dans ce paragraphe</p>
+            </div>
+            <div class="col-6">
+                <p class="stabilo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut cupiditate debitis
+                    nobis, at quae voluptates odio ratione inventore sint dolore quo. Minus aliquam amet, dolorem iure
+                    veniam molestiae magnam enim.</p>
+            </div>
+            <div class="col-sm-12 col md -">
+                <p class="une-classe">paragraphe1</p>
+                <p class="une-classe">paragraphe2</p>
+                <p class="une-classe">paragraphe3</p>
+                <p class="une-classe">paragraphe4</p>
+                <p class="une-classe">paragraphe5</p>
+            </div>
+            <!-- fin col  -->
+            <div class="col-sm-12 col-md-6">
+                <ul>
+                    <li>liste 1</li>
+                    <li>liste 2</li>
+                    <li>liste 3</li>
+                    <li>liste 4</li>
+                    <li class="bg-primary">liste 5</li>
+                    <li>liste 6</li>
+                </ul>
+            </div>
+            <!-- fin col  -->
+            <div class="col-sm-12 col-md-6">
+                <p class="selectClasse">bonjour je m'appelle nadia, j'ai 27 ans, je suis en formation pour préparer un
+                    dêplome de niveau bac + 3 "developpeuse web et web mobile"</p>
+                <p class="selectClasse">bonjour je m'appelle nadia, j'ai 27 ans, je suis en formation pour préparer un
+                    dêplome de niveau bac + 3 "developpeuse web et web mobile"</p>
+                <p class="selectClasse">bonjour je m'appelle nadia, j'ai 27 ans, je suis en formation pour préparer un
+                    dêplome de niveau bac + 3 "developpeuse web et web mobile"</p>
+                <p class="selectClasse">bonjour je m'appelle nadia, j'ai 27 ans, je suis en formation pour préparer un
+                    dêplome de niveau bac + 3 "developpeuse web et web mobile"</p>
+                <p class="selectClasse">bonjour je m'appelle nadia, j'ai 27 ans, je suis en formation pour préparer un
+                    dêplome de niveau bac + 3 "developpeuse web et web mobile"</p>
+                <p class="selectClasse">bonjour je m'appelle nadia, j'ai 27 ans, je suis en formation pour préparer un
+                    dêplome de niveau bac + 3 "developpeuse web et web mobile"</p>
+            </div>
+        </section>
+        <!-- fin rangée  -->
+    </div>
+    <!-- =================================== -->
+    <!-- fin container -->
+    <!-- =================================== -->
+    <!-- Optional JavaScript -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Mes scripts JS en externe -->
+    <script src="../mon js/mon-js.js"></script>
+    <script>
+        //coucou();
+
+        //1- pour sélectionner un élément
+        //méthode un peu désuette on peut la retrouver mais elle ne se pratique plus
+        //une sélection naturelle
+        //var select2 = titreN1;
+        //console.log(select2);
+
+        //3- avec   do..get... derectement avec un sélécteur
+        var select3 = document.getElementById('titreN1');
+        console.log(select3);
+
+        //4 - avec getelementByclasseName
+        //je cherche tous les elements qui ont cette classe 
+        var selectClass = document.getElementsByClassName('ma-classe');
+        console.log(selectClass);
+
+        //avec l'indice du tableau je selectionne le second (indice 1) des éléments qui ont la classe ma-classe
+        console.log(selectClass[1]);
+
+        selectClass[1].innerHTML = 'Et  là je change le contenu de ce paragraphe...';
+
+        // mini EXO modifiez le contenu de h2 #aChanger
+        //et mettre le textes suivant "2- youpi j'ai changé cette paragraphe"
+        var select4 = document.getElementById('aChanger');
+        console.log(select4);
+
+        select4.innerHTML = '2- youpi j\'ai changé cette paragraphe';
+
+        //5 -
+        var selectP = document.getElementsByTagName('p');
+        console.log(selectP);
+        //  console.log(selectP.length);
+
+        //changer style //modifiacation du style d'un élément : le p indice 0
+        selectP[0].style.backgroundColor = "pink";
+        selectP[0].style.fontVariant = "small-caps";
+        selectP[0].style.color = "white";
+        selectP[0].style.padding = "10px";
+        selectP[0].style.border = "2px solid green";
+        selectP[0].style.borderRadius = "80px";
+
+        //les mots clefs à appliquer avec .style
+
+        //https://www.w3schools.com/jsref/dom_obj_style.asp
+
+        //https://www.w3schools.com/jsref/dom_obj_style.asp
+        var selectBody = document.getSelection('body');
+        console.log(selectBody);
+
+        document.body.style.background = "url('img/coeur.jpg') repeat right top";
+
+        // select3.style.backgroundColor = 'olive';
+
+
+        //on va maintanant changer un paramètre de style de tous les p
+        console.info(selectP);
+
+        for (var i = 0; i < selectP.length; i++) {
+            selectP[i].style.backgroundColor = "red";
+            selectP[i].style.color = "white";
+
+        }
+
+        // on va maintenant ajouter un style qui vient des feuilles de style de la page, soit nos styles peerson, soit les styles de la feuille de bootstrap
+        selectP[0].classList.add('stabilo');
+        selectP[0].classList.add('p-4');
+
+        // selectP[1].classList.add('bg-secondary');
+
+        //6 - avec querySelector
+        //ici je selectionne un element par son id
+
+        let query1 = document.querySelector('#titre2');
+        console.log(query1); 7
+
+        //ici je selectionne un ou des éléments par une classe
+
+        let query2 = document.querySelectorAll('.une-classe');
+        console.log(query2);
+
+        let query3 = document.querySelectorAll('li');
+        console.log(query3);
+
+        query3[3].style.backgroundColor = "olive";
+
+        let query4 = document.querySelectorAll('li.pg-primary');
+        console.log(query4);
+
+        // EXO 
+        //dans une nouvelle col 4 ou 6 p avec la classe .selectClasse 
+        //puis selectionnez ces p dans une variable query 5
+        //changer le texte du p n°2 our "je change ce p.."
+        //passez le fond en blue et texte blanc et en gras
+
+        let query5 = document.querySelectorAll('.selectClasse');
+        console.log(query5);
+        console.log(query5[2].innerHTML);
+        console.log(query5.length);
+
+
+
+        query5[2].innerHTML = 'je change le contenu de ce paragraphe 2...';
+        query5[2].style.backgroundColor = "lightblue";
+        query5[2].style.color = "white";
+        query5[2].style.fontWeight = "bold";
+        query5[2].style.padding = "10px";
+
+        
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

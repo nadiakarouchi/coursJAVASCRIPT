@@ -1,0 +1,33 @@
+body {
+    background-color: pink;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: justify;
+   
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(218, 240, 247);
+}
+h2 {
+    background-color: lightcyan;
+    text-align: center;
+}
+h3 {
+    background-color: lightgoldenrodyellow;
+}
+span {
+    color: blue;
+    background: greenyellow;
+
+}
+
+.ma-classe {
+    background: rgb(240, 172, 146);
+}

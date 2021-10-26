@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - 02 - portee - fonctions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- =================================== -->
+    <!-- En-tête de la page -->
+    <!-- =================================== -->
+    <div class="container-fluid p-5 text-center">
+        <h1 class="display-4 " style="background-color: pink;">Javascript /IV fonctions - 02 Portee</h1>
+        <p class="lead text-decoration-underline">-</p>
+    </div>
+    <!-- =========================== -->
+    <!-- Conteneur principal -->
+    <!-- =========================== -->
+    <div class="container p-4">
+        <section class="row mt-4">
+            <div class="col-sm-12 col-md-6 bg-light border">
+                <h2>1- var & let</h2>
+                <ul>
+                    <li><code>let</code> aura une portée de bloc, ou une portée locale</li>
+                    <li><code>var</code> aura une portée élargie, ou une portée globale</li>
+                </ul>
+
+            </div>
+            <!-- fin col  -->
+            <div class="col-sm-12 col-md-6 bg-light border">
+                <h2>Exemples</h2>
+                <p id="p1" style="background-color: violet;"></p>
+                <p id="p2" style="background-color: yellow;"></p>
+                <p id="p3" style="background-color: violet;"></p>
+                <p id="p4" style="background-color: yellow;"></p>
+          
+
+            </div>
+        </section>
+        <!-- fin rangée  -->
+
+        <section class="row mt-4">
+            <div class="col-sm-12 col-md-6 bg-light border">
+                <h2>2 - Définition</h2>
+                <p> En JS, il existe deux espaces de portée différents : l'espace global et l'espace local.</p>
+                <ul>
+                    <li>L'espace global désigne l'entièreté d'un script, à l'exception de l'intérieur des fonctions.
+                    </li>
+                    <li>L'espace local désigne, à l'inverse, l'espace dans une fonction.</li>
+                </ul>
+
+            </div>
+            <!-- fin col -->
+
+            <div class="col-sm-12 col-md-6 bg-light border">
+                <h2>Exemples</h2>
+                <p id="p5" style="background-color: violet;"></p>
+                <p id="p6" style="background-color: yellow;"></p>
+                <p id="p7" style="background-color: violet;"></p>
+                <p id="p8" style="background-color: lightgreen;"></p>
+                <p id="p9" style="background-color: lightsalmon;"></p>
+
+            </div>
+            <!-- fin col -->
+            <!-- fin col  -->
+        </section>
+
+        <!-- fin rangée  -->
+    </div>
+    <!-- =================================== -->
+    <!-- fin container -->
+    <!-- =================================== -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Mes scripts JS en externe -->
+    <script src="portee.js"></script>
+    <!-- <script src="../mon js/mon-js.js"></script> -->
+</body>
+
+</html>

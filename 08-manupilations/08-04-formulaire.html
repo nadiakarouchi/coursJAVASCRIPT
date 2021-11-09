@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <title>JavaScript - VIII / 03 - Keydown</title>
+    <!-- <link rel="stylesheet" href="keydown.css"> -->
+    <style>
+        .cache {
+            display: none;
+        }
+
+        .error {
+            border: 5px solid red;
+        }
+
+        .valide {
+            border: 5px solid greenyellow;
+        }
+
+        .long {
+            border: 5px solid orange;
+        }
+
+        .confirm {
+            border: 5px solid rgb(224, 255, 47);
+        }
+        .rouge{
+            color: red;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color:mistyrose ;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Javascript/Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="../08_manipulations/08_01_diaporama.html">Diaporama</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="../08_manipulations/08_01_diaporama.html">SetInterval</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="../08_manipulations/08_01_diaporama.html">KeyDown</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="../08_manipulations/08_01_diaporama.html">Formulaire</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="../08_manipulations/08_01_diaporama.html">Toggle</a></li>
+
+
+
+
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- =========================== -->
+    <!-- En-tête de page -->
+    <!-- =========================== -->
+    <div class="container-fluid bg-info p-5 text-center">
+        <h1 id="titreN1" class="display-4">JavaScript - VIII/04 - page Formulaire</h1>
+        <p class="lead"><i class="bi bi-suit-heart"></i>formulaire en Bootstrap<i class="bi bi-suit-heart"></i>
+        </p>
+    </div>
+    <!-- =========================== -->
+    <!-- Conteneur principal -->
+    <!-- =========================== -->
+    <div class="container p-4 bg-light">
+        <!-- =================================== -->
+        <!-- formulaire 1 -->
+        <!-- =================================== -->
+        <section class="row p-4 border">
+            <div class="col-4 border">
+                <h1>Formulaire 1</h1>
+                <p>Fonction control Form</p>
+            </div>
+            <form action="#" method="get" name="form1" class="row col-8 p-4 border">
+                <div class="col-5">
+                    <label for="pseudo" class="visually-hidden">pseudo</label>
+                    <input type="text" name="pseudo" id="pseudo" class="form-control" placeholder="pseudo" required>
+                </div>
+                <div class="col-5">
+                    <label for="password" class="visually-hidden">password</label>
+                    <input type="password" name="password1" id="password1" class="form-control" placeholder="password"
+                        required>
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-primary" value="ok" id="submit"
+                        onclick="controleForm()">envoyer</button>
+                </div>
+            </form>
+            <!-- fin form  -->
+        </section>
+        <!-- fin rangée  -->
+
+        <!-- =================================== -->
+        <!-- formulaire 2 -->
+        <!-- =================================== -->
+        <section class="row p-4 border container">
+            <div class="col-4 border">
+                <h1>Formulaire 1</h1>
+                <p>Fonction control Form</p>
+            </div>
+            <form action="#" method="get" name="form2" class="row col-8 p-4 border container" id="formulaire2">
+                <!-- prenom  -->
+                <div class="col-12">
+                    <label for="prenom">prenom*</label>
+                    <input type="text" name="prenom" id="prenom" class="form-control" placeholder="votre prénom">
+                </div>
+                <!-- nom  -->
+                <div class="col-12">
+                    <label for="nom">Nom*</label>
+                    <input type="text" name="nom" id="nom" class="form-control" placeholder="votre nom">
+                </div>
+                <!-- Email  -->
+                <div class="col-12">
+                    <label for="prenom">Email*</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="saisi votre email">
+                </div>
+                <!-- mot de passe  -->
+                <div class="col-12">
+                    <label for="password" id="placeholder2">Choisissez un mot de pass*</label>
+                    <input type="password" name="password2" id="password2" class="form-control"
+                        placeholder="nom@exemple.com">
+                    <button type="button" id="eye">
+                        <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
+                    </button>
+                </div>
+                <!-- vérification de mot de passe  -->
+                <div class="col-12">
+                    <label for="password">retapez votre mot de passe*</label>
+                    <input type="password" name="confirmpassword22" id="confirmpassword2" class="form-control"
+                        placeholder="confirmez votre mot de passe">
+                </div>
+                <!-- connexion  -->
+                <div class="col-12 row mt-4 ps-4">
+                    <!-- <button type="submit" class="btn btn-primary col-4 me-2" value="ok" id="submit1" onclick="checkPass()">envoyer</button> 
+                    -->
+                    <button type="submit" class="btn btn-primary col-4 me-2" value="ok" id="submit1">envoyer</button>
+                    <!-- effacer  -->
+                    <button type="reset" class="btn btn-success col-4" id="resetForm">effacer</button>
+                </div>
+            </form>
+        </section>
+        <!-- fin rangée  -->
+
+    </div>
+
+    <!-- fin div container -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="../js/mon_js.js"></script> -->
+    <script src="formulaire.js"></script>
+
+</body>
+
+</html>

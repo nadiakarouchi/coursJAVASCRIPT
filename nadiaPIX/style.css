@@ -1,0 +1,57 @@
+
+/* page pix design nadia  */
+body {
+    width: 960px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background: url(img/header.png);
+
+}
+h1 {
+    color: #FF4F13;
+    font-size: 30px;
+    font-family: Aclonica;
+}
+h2 {
+    color: #FF4F13;
+
+}
+h3 {
+    color: #FF4F13;
+}
+h4{
+    font-family: Aclonica;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-right: 10px;
+}
+#einstein {
+    height: 200px;
+}
+#bloc1 {
+    background-color: #E6E6E6;
+}
+#reseau i{
+justify-content: space-evenly;
+text-decoration: none;
+padding: 10px;
+color: #FF4F13;
+font-size: 50px;
+
+}
+span {
+    color: white;
+}
+footer {
+   color: white;
+   background-color: #343434;
+   text-align: center;
+  
+}

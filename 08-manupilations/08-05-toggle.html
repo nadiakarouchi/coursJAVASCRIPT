@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <title>JavaScript - VIII / 03 - Keydown</title>
+    <!-- <link rel="stylesheet" href="keydown.css"> -->
+    <style>
+        .cache {
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color:mistyrose ;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Javascript/Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="../08_manipulations/08_01_diaporama.html">Diaporama</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="../08_manipulations/08_01_diaporama.html">SetInterval</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="../08_manipulations/08_01_diaporama.html">KeyDown</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="../08_manipulations/08_01_diaporama.html">Toggle</a></li>
+
+
+
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- =========================== -->
+    <!-- En-tête de page -->
+    <!-- =========================== -->
+    <div class="container-fluid bg-info p-5 text-center">
+        <h1 id="titreN1" class="display-4">JavaScript - VIII/04 - page Toggle</h1>
+        <p class="lead"><i class="bi bi-suit-heart"></i>Afficher , cacher un élément<i class="bi bi-suit-heart"></i>
+        </p>
+    </div>
+    <!-- =========================== -->
+    <!-- Conteneur principal -->
+    <!-- =========================== -->
+    <div class="container p-4 bg-light">
+        <section class="row p-4">
+           <div class="col-12">
+                <button type="button" class="btn btn-outline-primary" id="cacheImage">Aficher / cacher l'image</button>
+           </div>
+        </section>
+        <section class="row p-4">
+            <div class="col-12">
+                <img src="img/paris-1225923_1280.jpg" alt="paris" class="img-fluid cache">
+            </div>
+        </section>
+
+    </div>
+    <!-- fin col  -->
+    </section>
+    <!-- fin rangée  -->
+    </div>
+
+    <!-- fin div container -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="../js/mon_js.js"></script> -->
+    <script src="toggle.js"></script>
+
+</body>
+
+</html>
